@@ -11,3 +11,4 @@ with zipfile.ZipFile(file_name, 'r') as zip_ref:
     zip_ref.extractall()
 
 os.rename('models-2.11.0', 'models')
+

@@ -14,6 +14,14 @@
 
 """TensorFlow Model Garden Vision training driver."""
 
+import os
+import os
+os.environ['PYTHONPATH'] += ':models/research/'
+os.environ['PYTHONPATH'] += ':models/'
+os.environ['PYTHONPATH'] += ':models/official/'
+os.environ['PYTHONPATH'] += ':keras_cv_attention_models/' 
+
+
 from absl import app
 from absl import flags
 import gin
@@ -67,3 +75,4 @@ if __name__ == '__main__':
   tfm_flags.define_flags()
   flags.mark_flags_as_required(['experiment', 'mode', 'model_dir'])
   app.run(main)
+
